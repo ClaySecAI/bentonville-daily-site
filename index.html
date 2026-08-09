@@ -4,376 +4,74 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Bentonville Daily — Public records and local institutions, daily.</title>
 <link rel="canonical" href="https://bentonvilledaily.com/">
-<meta name="description" content="A Heat Advisory is in effect for Benton County with heat index values up to 108 expected Sunday, alongside city meetings on finance and a one-cent sales tax proposal.">
+<meta name="description" content="A heat advisory is in effect for Benton County until 8 p.m. Sunday, with heat index values expected to reach 108 degrees.">
 <meta property="og:title" content="Bentonville Daily — Public records and local institutions, daily.">
-<meta property="og:description" content="A Heat Advisory is in effect for Benton County with heat index values up to 108 expected Sunday, alongside city meetings on finance and a one-cent sales tax proposal.">
-<meta property="og:type" content="article">
+<meta property="og:description" content="A heat advisory is in effect for Benton County until 8 p.m. Sunday, with heat index values expected to reach 108 degrees.">
+<meta property="og:type" content="website">
 <meta property="og:site_name" content="Bentonville Daily">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://bentonvilledaily.com/og.png">
 <link rel="alternate" type="application/rss+xml" title="Bentonville Daily" href="feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&display=swap">
-<style>
-:root {
-  color-scheme: light;
-
-  /* Ozark palette. Cool and green: limestone bluff, creek water, hardwood
-     canopy. No warm sand and no terracotta anywhere, which is what made the
-     first attempt read as desert. */
-  --limestone:  #eef1eb;   /* bluff limestone, faint green cast, the page */
-  --chert:      #e2e8dd;   /* raised panels */
-  --bone:       #f8faf6;
-  --canopy:     #2c6b45;   /* hardwood canopy, the accent */
-  --canopy-lo:  #1f4e32;
-  --leaf:       #3a875a;   /* hover */
-  --understory: #13241a;   /* deep shade, the ink */
-  --slate:      #45574b;
-  --lichen:     #6d8074;
-  --shale:      #c7d2c4;   /* rules */
-  --hickory:    #9a6b1c;   /* autumn, held for warnings */
-
-  --bg:        var(--limestone);
-  --bg-raised: var(--bone);
-  --bg-sunk:   var(--chert);
-  --ink:       var(--understory);
-  --ink-muted: var(--slate);
-  --ink-quiet: var(--lichen);
-  --accent:    var(--canopy);
-  --accent-hi: var(--leaf);
-  --rule:      var(--shale);
-
-  --display: "Zilla Slab", "Bitter", Georgia, "Times New Roman", serif;
-  --serif:   "Literata", "Iowan Old Style", Georgia, serif;
-  --mono:    ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-
-  --t-d1:   clamp(2.1rem, 6vw, 3.4rem);
-  --t-d2:   clamp(1.35rem, 2.6vw, 1.9rem);
-  --t-lede: clamp(1.06rem, 1.5vw, 1.24rem);
-  --t-body: 1.05rem;
-  --t-small: 0.875rem;
-  --t-kicker: 0.7rem;
-
-  --gap-xs: 8px;  --gap-s: 16px;  --gap-m: 24px;
-  --gap-l: 40px;  --gap-xl: 64px;
-
-  /* One column width for everything. The masthead, the folio rule and the
-     text all share a left edge; a wide masthead over a centred narrow column
-     leaves the two unaligned and the page looks broken rather than airy. */
-  --reading: 720px;
-  --wide: 720px;
-}
-
-*, *::before, *::after { box-sizing: border-box; }
-
-html { -webkit-text-size-adjust: 100%; }
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: var(--t-body);
-  line-height: 1.65;
-  font-optical-sizing: auto;
-}
-
-.container { width: 100%; max-width: var(--wide); margin: 0 auto; padding: 0 var(--gap-m); }
-.container--reading { max-width: var(--reading); }
-
-a { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 2px; }
-a:hover { text-decoration-color: var(--accent); }
-
-/* ---------- masthead ---------- */
-
-.masthead {
-  border-bottom: 2px solid var(--ink);
-  background: var(--bg);
-  padding-top: var(--gap-m);
-}
-.masthead__row {
-  display: flex; align-items: baseline; justify-content: space-between;
-  gap: var(--gap-s); flex-wrap: wrap; padding-bottom: var(--gap-s);
-}
-.masthead__wordmark {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: var(--t-d1);
-  line-height: 1.02;
-  letter-spacing: -0.02em;
-  margin: 0;
-}
-.masthead__wordmark a { text-decoration: none; }
-.masthead__tagline {
-  font-size: var(--t-small);
-  color: var(--ink-muted);
-  font-style: italic;
-  margin: 0;
-}
-
-/* The rule under the masthead, doubled the way a newspaper folio is, with an
-   Ozark ridgeline riding on it. Inline SVG in a data URI so the page stays a
-   single file with no image request. */
-.masthead::after {
-  content: ""; display: block; height: 14px;
-  border-top: 1px solid var(--ink);
-  margin-top: 2px;
-  background-repeat: repeat-x;
-  background-position: left bottom;
-  background-size: 240px 14px;
-  opacity: 0.5;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='14' fill='none'><path d='M0 13 L18 7 L31 10 L48 3 L63 9 L79 5 L96 11 L114 6 L128 9 L145 2 L160 8 L176 5 L191 10 L208 6 L222 9 L240 4' stroke='%236d8074' stroke-width='1.2' stroke-linejoin='round'/></svg>");
-}
-
-.folio {
-  display: flex; justify-content: space-between; align-items: center;
-  gap: var(--gap-s); flex-wrap: wrap;
-  font-family: var(--mono);
-  font-size: var(--t-kicker);
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  padding: var(--gap-xs) 0;
-  border-bottom: 1px solid var(--rule);
-}
-
-/* ---------- lead ---------- */
-
-.lede {
-  font-size: var(--t-lede);
-  line-height: 1.5;
-  color: var(--ink);
-  margin: var(--gap-l) 0 var(--gap-m);
-  padding-left: var(--gap-s);
-  border-left: 3px solid var(--accent);
-}
-
-/* ---------- rundown ---------- */
-
-.rundown {
-  background: var(--bg-sunk);
-  border: 1px solid var(--rule);
-  padding: var(--gap-s) var(--gap-m);
-  margin: 0 0 var(--gap-l);
-}
-.rundown__head {
-  font-family: var(--mono);
-  font-size: var(--t-kicker);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  margin: 0 0 var(--gap-xs);
-}
-.rundown ol { margin: 0; padding-left: 1.15rem; }
-.rundown li { margin: 0.25rem 0; font-size: var(--t-small); line-height: 1.45; }
-
-/* ---------- items ---------- */
-
-.item {
-  padding: var(--gap-m) 0;
-  border-top: 1px solid var(--rule);
-  scroll-margin-top: var(--gap-m);
-}
-.item:first-of-type { border-top: 2px solid var(--ink); }
-
-.kicker {
-  font-family: var(--mono);
-  font-size: var(--t-kicker);
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin: 0 0 var(--gap-xs);
-}
-.item__head {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: var(--t-d2);
-  line-height: 1.18;
-  letter-spacing: -0.01em;
-  margin: 0 0 var(--gap-xs);
-}
-.item__body { margin: 0 0 var(--gap-xs); }
-.item__src { font-size: var(--t-small); color: var(--ink-muted); margin: 0; }
-.item__src a { color: var(--accent); text-decoration-color: var(--accent); }
-
-/* ---------- meeting preview ---------- */
-
-/* The page opens on a kicker rather than a lede, so it needs the top space the
-   lede's margin would otherwise have provided. */
-.kicker--lead { margin-top: var(--gap-l); }
-
-.meeting__head {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: var(--t-d2);
-  line-height: 1.15;
-  margin: 0 0 var(--gap-xs);
-}
-.meeting__when {
-  font-family: var(--mono);
-  font-size: var(--t-small);
-  color: var(--ink-muted);
-  margin: 0 0 var(--gap-m);
-}
-
-/* Facts lifted verbatim from the agenda document. Set in the data voice and
-   on a tinted panel so a reader can see at a glance which part of the page is
-   quoted and which part is written. */
-.facts {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 2px var(--gap-s);
-  margin: var(--gap-s) 0 0;
-  padding: var(--gap-s);
-  background: var(--bg-sunk);
-  border-left: 3px solid var(--accent);
-  font-family: var(--mono);
-  font-size: var(--t-small);
-}
-.facts dt {
-  color: var(--ink-muted);
-  text-transform: uppercase;
-  font-size: var(--t-kicker);
-  letter-spacing: .08em;
-  padding-top: 3px;
-}
-.facts dd { margin: 0; font-variant-numeric: tabular-nums; }
-
-/* ---------- archive ---------- */
-
-.section-head {
-  font-family: var(--mono);
-  font-size: var(--t-kicker);
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  border-bottom: 1px solid var(--ink);
-  padding-bottom: var(--gap-xs);
-  margin: var(--gap-xl) 0 var(--gap-s);
-}
-.archive { list-style: none; margin: 0; padding: 0; }
-.archive li { border-bottom: 1px solid var(--rule); }
-.archive a {
-  display: flex; justify-content: space-between; gap: var(--gap-s);
-  padding: 0.6rem 0; text-decoration: none; align-items: baseline;
-}
-.archive a:hover { color: var(--accent); }
-.archive__date { font-weight: 500; }
-.archive__count { font-family: var(--mono); font-size: var(--t-kicker); color: var(--ink-quiet); }
-
-/* ---------- pager ---------- */
-
-.pager {
-  display: flex; justify-content: space-between; gap: var(--gap-s);
-  /* margin-inline stays auto: a bare `margin: x 0 0` here overrode the
-     container's centring and threw the pager out to the window edge. */
-  margin: var(--gap-xl) auto 0; padding-top: var(--gap-s);
-  border-top: 1px solid var(--rule);
-  font-size: var(--t-small);
-}
-.pager a { color: var(--accent); }
-.pager span { color: var(--ink-quiet); }
-
-/* ---------- notices ---------- */
-
-.notice {
-  border-left: 3px solid var(--hickory);
-  background: var(--bg-sunk);
-  padding: var(--gap-s);
-  margin: var(--gap-m) 0;
-  font-size: var(--t-small);
-}
-.notice ul { margin: var(--gap-xs) 0 0; padding-left: 1.1rem; }
-.notice__head { font-weight: 600; }
-
-.draft-banner {
-  background: var(--hickory);
-  color: #1b1206;
-  font-family: var(--mono);
-  font-size: var(--t-kicker);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-align: center;
-  padding: var(--gap-xs);
-}
-
-.empty { color: var(--ink-muted); font-style: italic; margin: var(--gap-l) 0; }
-
-/* ---------- footer ---------- */
-
-.footer {
-  margin-top: var(--gap-xl);
-  border-top: 2px solid var(--ink);
-  padding: var(--gap-m) 0 var(--gap-xl);
-  font-size: var(--t-small);
-  color: var(--ink-muted);
-}
-.footer p { margin: 0 0 var(--gap-xs); }
-.footer a { color: var(--accent); }
-
-@media (max-width: 640px) {
-  .folio { font-size: 0.62rem; }
-  .rundown { padding: var(--gap-s); }
-}
-
-@media print {
-  .rundown, .pager, .draft-banner { display: none; }
-  body { background: #fff; color: #000; }
-}
-</style>
-<header class="masthead"><div class="container">
+<link rel="stylesheet" href="style.css?v=1789704eb0">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Bentonville Daily", "url": "https://bentonvilledaily.com", "description": "Public records and local institutions, daily."}</script>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead"><div class="container ">
 <div class="masthead__row">
 <h1 class="masthead__wordmark">Bentonville Daily</h1>
 <p class="masthead__tagline">Public records and local institutions, daily.</p>
 </div></div></header>
-<div class="container"><div class="folio"><span>Sunday, August 9, 2026</span><span>Latest brief</span></div></div>
-<main class="container container--reading">
-<p class="lede">A Heat Advisory is in effect for Benton County with heat index values up to 108 expected Sunday, alongside city meetings on finance and a one-cent sales tax proposal.</p>
-<nav class="rundown" aria-label="In this brief">
-<p class="rundown__head">In this brief</p><ol>
-<li><a href="#1-heat-advisory-in-effect-through-sunday-evening">Heat Advisory in effect through Sunday evening</a></li>
-<li><a href="#2-combined-committee-of-the-whole-and-city-council-meets-augus">Combined Committee of the Whole and city council meets August 11</a></li>
-<li><a href="#3-taziki-s-mediterranean-caf-opens-in-rogers">Taziki’s Mediterranean Café opens in Rogers</a></li>
-<li><a href="#4-benton-county-holds-meeting-on-one-cent-sales-tax">Benton County holds meeting on One-Cent sales tax</a></li>
-<li><a href="#5-fayetteville-confirms-cooling-center-locations-through-augus">Fayetteville confirms cooling center locations through August 16</a></li>
-</ol></nav>
-<article class="item" id="1-heat-advisory-in-effect-through-sunday-evening">
-<p class="kicker">Weather</p>
-<h2 class="item__head">Heat Advisory in effect through Sunday evening</h2>
-<p class="item__body">The National Weather Service has issued a Heat Advisory for Benton County with heat index values up to 108 from noon to 8 PM CDT Sunday.</p>
-<p class="item__src">Source: <a href="https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.feeb41873080265e26b3330b9f645eeb3117d34f.001.1" rel="noopener nofollow">NWS</a></p>
-</article>
-<article class="item" id="2-combined-committee-of-the-whole-and-city-council-meets-augus">
-<p class="kicker">Agenda</p>
-<h2 class="item__head">Combined Committee of the Whole and city council meets August 11</h2>
-<p class="item__body">The council is asked to approve several zoning changes, a vacation of a right of way, and two grants for parks and traffic technology. Agendas for 1 other meeting this period are also published.</p>
-<p class="item__src">Source: <a href="meeting-2026-08-11-combined-committee-of-the-whole-and-city-council.html" rel="noopener nofollow">Agenda</a></p>
-</article>
-<article class="item" id="3-taziki-s-mediterranean-caf-opens-in-rogers">
-<p class="kicker">Business</p>
-<h2 class="item__head">Taziki’s Mediterranean Café opens in Rogers</h2>
-<p class="item__body">Taziki’s Mediterranean Café opened at 1771 W. Pleasant Grove Road, Suite 104 in Rogers. The approximately 2,900-square-foot restaurant includes seating for 85 guests and involved about $950,000 investment.</p>
-<p class="item__src">Source: <a href="https://talkbusiness.net/2026/08/tazikis-opens-rogers-location/" rel="noopener nofollow">Talk Business &amp; Politics</a></p>
-</article>
-<article class="item" id="4-benton-county-holds-meeting-on-one-cent-sales-tax">
-<p class="kicker">Around Town</p>
-<h2 class="item__head">Benton County holds meeting on One-Cent sales tax</h2>
-<p class="item__body">Benton County’s Council meeting addressed the one-cent sales tax proposal.</p>
-<p class="item__src">Source: <a href="https://www.nwahomepage.com/northwest-arkansas-news/benton-county-holds-intergovernment-meeting-over-one-cent-sales-tax/" rel="noopener nofollow">KNWA/FOX24</a></p>
-</article>
-<article class="item" id="5-fayetteville-confirms-cooling-center-locations-through-augus">
-<p class="kicker">Around Town</p>
-<h2 class="item__head">Fayetteville confirms cooling center locations through August 16</h2>
-<p class="item__body">The City of Fayetteville has confirmed cooling shelters for the week of August 8 through 16 amid high temperatures.</p>
-<p class="item__src">Source: <a href="https://www.nwahomepage.com/news/local-news/fayetteville-confirms-cooling-center-locations-for-august-8-through-16/" rel="noopener nofollow">KNWA/FOX24</a></p>
-</article>
-<h2 class="section-head">Coming up at City Hall</h2>
-<ul class="archive">
-<li><a href="meeting-2026-08-11-combined-committee-of-the-whole-and-city-council.html"><span class="archive__date">Combined Committee Of The Whole And City Council</span><span class="archive__count">Tue Aug 11</span></a></li>
-<li><a href="meeting-2026-08-11-finance-committee-meeting.html"><span class="archive__date">Finance Committee Meeting</span><span class="archive__count">Tue Aug 11</span></a></li>
+<div class="status"><div class="container"><div class="status__row"><span class="status__item"><span class="status__label">Bentonville and Benton County</span></span><span class="status__item"><span class="status__label">Alert</span><span class="status__alert">Heat advisory issued for Benton County through Sunday evening</span></span><span class="status__item"><span class="status__label">Next meeting</span><span><a href="meeting-2026-08-11-combined-committee-of-the-whole-and-city-council.html">Combined Committee of the Whole and City Council</a> Tue Aug 11</span></span></div></div></div>
+<div class="container "><div class="folio"><span>Sunday, August 9, 2026</span><span>13 items</span></div></div>
+<main id="main" class="container">
+<section class="lead-grid">
+<div>
+<p class="kicker kicker--weather lead__kicker">Weather</p>
+<h2 class="lead__head">Heat advisory issued for Benton County through Sunday evening</h2>
+<p class="lead__dek">The National Weather Service issued a heat advisory for Benton County from noon to 8 p.m. CDT on Sunday, with heat index values up to 108 expected.</p>
+<p class="lead__more"><a href="2026-08-09.html">Read the full brief &rarr;</a></p>
+</div>
+<aside class="rundown" aria-label="Also today">
+<p class="rundown__head">Also today</p><ol>
+<li><a href="2026-08-09.html">Walton Family Foundation grants $599,139 to NWACC</a></li>
+<li><a href="2026-08-09.html">Jessica DeBari named executive director of Community Creative Center</a></li>
+<li><a href="2026-08-09.html">Tyson Foods board declares quarterly dividend</a></li>
+<li><a href="2026-08-09.html">NWACC announces new dean of communications and arts division</a></li>
+<li><a href="2026-08-09.html">Benton County named candidate for possible nuclear development</a></li>
+<li><a href="2026-08-09.html">Benton County discusses one-cent sales tax proposal</a></li>
+</ol></aside>
+</section>
+<section class="across">
+<div class="cell">
+<p class="kicker kicker--government">City Hall</p>
+<h3>Combined Committee of the Whole and City Council meets August 11</h3>
+<p>The council is asked to approve several zoning changes, a vacation of a right of way, and two grants for parks and traffic technology. Agendas for 1…</p>
+</div>
+<div class="cell">
+<p class="kicker kicker--">City of Bentonville</p>
+<h3>City council to consider street improvements and other business monday</h3>
+<p>Bentonville&#x27;s combined Committee of the Whole and City Council will meet Monday at 6 p.m. The Finance Committee meets at 5 p.m. the same day.</p>
+</div>
+<div class="cell">
+<p class="kicker kicker--business">Business</p>
+<h3>Taziki&#x27;s opens Rogers location</h3>
+<p>Taziki&#x27;s Mediterranean Café opened at 1771 W. Pleasant Grove Road, Suite 104, in Rogers. The approximately 2,900-square-foot restaurant seats 85…</p>
+</div>
+<div class="cell">
+<p class="kicker kicker--business">Business</p>
+<h3>Simmons Foods promotes Salmon to chief commercial officer</h3>
+<p>Siloam Springs-based Simmons Foods promoted Scott Salmon, president of Simmons Pet Food, to the newly created role of chief commercial officer. Jacob…</p>
+</div>
+</section>
+<h2 class="section-head">The week at City Hall</h2>
+<ul class="week">
+<li class="day"><span class="day__when">Tue Aug 11</span><span class="day__what"><a href="meeting-2026-08-11-combined-committee-of-the-whole-and-city-council.html">Combined Committee of the Whole and City Council</a></span><span class="day__tag">Agenda posted</span></li>
+<li class="day"><span class="day__when">Tue Aug 11</span><span class="day__what"><a href="meeting-2026-08-11-finance-committee-meeting.html">Finance Committee Meeting</a></span><span class="day__tag">Agenda posted</span></li>
 </ul>
 </main>
-<footer class="footer"><div class="container container--reading">
+<footer class="footer"><div class="container ">
 <p>Summaries are written in original wording. Follow each link for the full report at the source.</p>
 <p>Bentonville Daily covers institutions and public records in Bentonville and Benton County. It does not cover crime, charges or court cases, and never reports a person's name in connection with one.</p>
 <p>Corrections: <a href="mailto:corrections@bentonvilledaily.com">corrections@bentonvilledaily.com</a> &middot; <a href="feed.xml">RSS</a></p>

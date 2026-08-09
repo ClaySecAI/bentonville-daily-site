@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bentonvilledaily.com/sitemap.xml
