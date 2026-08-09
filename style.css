@@ -260,7 +260,7 @@ a:hover { color: var(--accent-hi); text-decoration-color: var(--accent-hi); }
    content took three screens and gained no rhythm. */
 .across {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: var(--gap-m);
   border-top: 2px solid var(--ink);
   padding-top: var(--gap-m);
@@ -278,7 +278,7 @@ a:hover { color: var(--accent-hi); text-decoration-color: var(--accent-hi); }
 /* The meeting calendar, which was being crammed into one prose sentence. */
 .week {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: var(--gap-s);
   margin: var(--gap-s) 0 0;
   padding: 0; list-style: none;
