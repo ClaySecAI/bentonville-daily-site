@@ -233,6 +233,17 @@ a:hover { color: var(--accent-hi); text-decoration-color: var(--accent-hi); }
 .item__src { font-size: var(--t-small); color: var(--ink-muted); margin: 0; }
 .item__src a { color: var(--accent); text-decoration-color: var(--accent); }
 
+/* A link to our own record of the meeting behind a story, set apart from the
+   outbound source line so a reader can see which is ours. */
+.item__related {
+  margin: var(--gap-xs) 0 0;
+  font-family: var(--mono);
+  font-size: var(--t-kicker);
+  letter-spacing: .06em;
+}
+.item__related a { color: var(--accent); text-decoration: none; }
+.item__related a:hover { text-decoration: underline; }
+
 /* ---------- front page ---------- */
 
 .lead-grid {
@@ -318,6 +329,32 @@ a:hover { color: var(--accent-hi); text-decoration-color: var(--accent-hi); }
   padding: var(--gap-s) var(--gap-m);
 }
 .item--alert .item__head { font-size: var(--t-d3); }
+
+/* ---------- recorded votes ---------- */
+
+.votes { list-style: none; margin: var(--gap-s) 0 0; padding: 0; }
+.votes li {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: var(--gap-s);
+  align-items: baseline;
+  padding: var(--gap-xs) 0;
+  border-top: 1px solid var(--rule);
+  font-size: var(--t-small);
+}
+.votes__tally {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.votes__result {
+  font-family: var(--mono);
+  font-size: var(--t-kicker);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.votes__what { color: var(--ink-muted); }
 
 /* ---------- meeting preview ---------- */
 
