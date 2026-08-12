@@ -317,6 +317,10 @@ a:hover { color: var(--accent-hi); text-decoration-color: var(--accent-hi); }
 .kicker--weather    { color: var(--hickory); }
 .kicker--business   { color: var(--slate); }
 .kicker--news       { color: var(--ink-muted); }
+/* Civic institution beats share the civic accent; the label carries the beat. */
+.kicker--schools    { color: var(--accent); }
+.kicker--county     { color: var(--accent); }
+.kicker--airport    { color: var(--accent); }
 /* Trail clay. The one warm note in the palette, and the only place it earns a
    spot: red dirt is what the singletrack here is actually made of. */
 .kicker--trails     { color: #9c5230; }
